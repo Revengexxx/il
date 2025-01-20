@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Угадайка</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body>
+<div class="container">
+    <div class="row game-card align-items-center">
+        <div class="col col-md-4 offset-md-4">
+            <div class="card text-center">
+                <h5 class="modal-title">Загадай число и нажми старт</h5>
+                <div class="card-header">
+                    <p class="m-0">Ответ <span id="orderNumberField"></span></p>
+                </div>
+                <div class="card-body">
+                    <div class="row no-gutters">
+                        <div class="col">
+                            <h3 class="card-title m-0"><span id="answerField"></span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="btn-group">
+                        <button class="btn btn-info" id="btnLess">&#129047;<br>меньше</button>
+                        <button class="btn btn-success btn-lg" id="btnEqual">Верно!</button>
+                        <button class="btn btn-info" id="btnOver">больше<br>&#129045;</button>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-link" id="btnRetry"><b>Старт/Рестарт</b></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalInputValues" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Введите значений для игры</h5>
+        </div>
+        <div class="modal-body">
+            <form>
+                <label for="minValueInput">Минимальное значение</label>
+                <input type="text" class="form-control" id="minValueInput" placeholder="-999">
+                <label for="maxValueInput">Максимальное значение</label>
+                <input type="text" class="form-control" id="maxValueInput" placeholder="999">
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Старт!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
